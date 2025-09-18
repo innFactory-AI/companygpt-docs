@@ -6,20 +6,62 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'innFactory CompanyGPT Docs',
+			editLink: {
+				baseUrl: 'https://github.com/innFactory/company-gpt-docs/edit/main'
+			},
+			defaultLocale: 'root',
+			locales: {
+				root: { label: 'Deutsch', lang: 'de' },
+			},
+			logo: {
+				src: './src/assets/logo.svg',
+				alt: 'innFactory CompanyGPT Docs',
+
+			},
+			tagline: 'Dokumentation und Anleitungen zu CompanyGPT, dem internen ChatGPT für Unternehmen.',
+			favicon: './src/assets/favicon-32x32.png',
+			lastUpdated: true,
+			titleDelimiter: '|',
+			markdown: {
+				headingLinks: true,
+			},
+			description: 'Dokumentation und Anleitungen zu CompanyGPT, dem internen ChatGPT für Unternehmen.',
+			// social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Einführung',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'CompanyGPT', slug: 'intro/company-gpt' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'CompanyGPT',
+					items: [
+						{ label: 'User Interface', slug: 'company-gpt/user-interface' },
+						{ label: 'Einstellungen', slug: 'company-gpt/einstellungen' },
+						{ label: 'Chat', slug: 'company-gpt/chat' },
+					]
 				},
+				{
+					label: 'Prompt Engineering',
+					items: [
+						{ label: 'Übersicht', slug: 'prompt-engineering/uebersicht' },
+						{ label: 'Prompts formatieren', slug: 'prompt-engineering/prompts-formatieren' },
+						{ label: 'Prompts strukturieren', slug: 'prompt-engineering/prompts-strukturieren' },
+						{
+							label: 'Prompttechniken', items: [
+								{ label: 'Zero-Shot Prompting', slug: 'prompt-engineering/prompt-techniken/zero-shot' },
+								{ label: 'Few-Shot Prompting', slug: 'prompt-engineering/prompt-techniken/few-shot' },
+								{ label: 'Prompt Chaining', slug: 'prompt-engineering/prompt-techniken/prompt-chaining' },
+							]
+						},
+						// { label: 'Best Practices', slug: 'prompt-engineering/best-practices' },
+					]
+				},
+
+
 			],
 		}),
 	],
