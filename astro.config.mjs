@@ -9,12 +9,13 @@ export default defineConfig({
 		starlight({
 			title: 'innFactory CompanyGPT Docs',
 			editLink: {
-				baseUrl: 'https://github.com/innFactory/company-gpt-docs/edit/main'
+				baseUrl: 'https://github.com/innFactory-AI/companygpt-docs/edit/main'
 			},
 			defaultLocale: 'root',
 			locales: {
 				root: { label: 'Deutsch', lang: 'de' },
 			},
+			customCss: ['./src/styles/global.css'],
 			logo: {
 				src: './src/assets/logo.svg',
 				alt: 'innFactory CompanyGPT Docs',
