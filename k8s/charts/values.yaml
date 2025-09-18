@@ -8,4 +8,4 @@ companygpt-docs:
     allowOrigin: '*'
     host: docs.company-gpt.com
 image:
-  tag: 1.0.0
+  tag: 1.0.1

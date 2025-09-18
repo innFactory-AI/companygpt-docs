@@ -1,6 +1,6 @@
 name: companygpt-docs
 description: Helm Chart für Company GPT Docs
-version: 1.0.0
+version: 1.0.1
 apiVersion: v2
 keywords:
   - docker-compose
