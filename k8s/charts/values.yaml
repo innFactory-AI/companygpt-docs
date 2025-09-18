@@ -7,3 +7,5 @@ companygpt-docs:
     name: companygpt-docs
     allowOrigin: '*'
     host: docs.company-gpt.com
+image:
+  tag: 1.0.0
