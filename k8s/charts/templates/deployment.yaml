@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: companygpt-docs
+  labels:
+    app: companygpt-docs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: companygpt-docs
+  template:
+    metadata:
+      labels:
+        app: companygpt-docs
+    spec:
+      imagePullSecrets:
+        - name: registry-1
+      containers:
+        - name: companygpt-docs
+          image: "{{ .Values.companygpt-docs.image.repository }}:{{ .Values.companygpt-docs.image.tag }}"
+          ports:
+            - name: http-port
+              containerPort: {{ .Values.companygpt-docs.port }}
+              protocol: TCP
+          # env:
+          #   {{- range $key, $value := .Values.companygpt-docs.env }}
+          #   - name: {{ $key }}
+          #     value: {{ $value | quote }}
+          #   {{- end }}

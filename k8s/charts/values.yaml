@@ -1,0 +1,5 @@
+companygpt-docs:
+  image:
+    repository: ghcr.io/innfactory-ai/companygpt-docs
+    tag: 1.0.0
+  port: 8080

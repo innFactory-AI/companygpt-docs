@@ -1,0 +1,9 @@
+name: companygpt-docs
+description: Helm Chart für Company GPT Docs
+version: 1.0.1
+apiVersion: v2
+keywords:
+  - docker-compose
+sources: 
+  - https://github.com/innFactory-AI/companygpt-docs
+home: https://github.com/innFactory-AI/companygpt-docs
